@@ -13,11 +13,11 @@ def start(name="", number=0, decimal=0, array=[]):
     number = get_number(name, number)
     decimal = get_decimal(name, decimal)
     array = short_list(name, array)
-    fun_facts(number,decimal)
+    fun_facts(number,decimal, array)
     
 def get_name(name):
     #In this function we get the user's name, assign the string to a variable, and use .format to print it back.
-    name = raw_input("Hello my dude! I want to play a game. The rules are simple. Just do everything I ask. First of all, what is your name? ").capitalize()
+    name = raw_input("\nHello my dude! I want to play a game. The rules are simple. Just do everything I ask. First of all, what is your name? ").capitalize()
     print("\n{}, what a great name!".format(name))
     return name
 
@@ -63,7 +63,7 @@ def get_decimal(name, decimal):
     return decimal
 
 def short_list(name, array):
-    
+    array = []
     print("\nOk {}, I'm gonna ask you about some people you like.".format(name))
     stop = False
     while stop == False:
@@ -84,7 +84,7 @@ def short_list(name, array):
             array = []
     return array
 
-def fun_facts(number, decimal):
+def fun_facts(number, decimal, array):
     #In this function we'll use all those math operators, +,-,*,/,+=,-, and %
     #Then we'll take those answers and put them into a tuple, and iterate through it with a for loop
     print("\nHey now, you remember those numbers you told me? {} and {}? Check this out, here's some fun facts: ".format(number,decimal))
@@ -104,7 +104,16 @@ def fun_facts(number, decimal):
     print("\nSo now we have these numbers:")
     for i in tup:
         print(i)
-    exit()
+    print("\nIt turns out, if you add all these numbers, you get {}".format(answer1+answer2+answer3+answer4+answer5))
+    print("As it just so happens, this is the exact favorite number of your favorite author...")
+    print("\nAnd that person's name is... {}!".format(array[0]))
+    print("\nThank you for indulging me for a bit in this fun exercise. Have a nice day!")
+    answer = raw_input("If you'd like to do this again, type again. Enter anything else to exit. ").lower()
+    if answer == 'again':
+        name=""
+        start(name,number,decimal,array)
+    else:
+        exit()
         
     
 if __name__ == "__main__":
