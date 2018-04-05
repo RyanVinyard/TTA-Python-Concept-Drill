@@ -86,6 +86,7 @@ def short_list(name, array):
 
 def fun_facts(number, decimal):
     #In this function we'll use all those math operators, +,-,*,/,+=,-, and %
+    #Then we'll take those answers and put them into a tuple, and iterate through it with a for loop
     print("\nHey now, you remember those numbers you told me? {} and {}? Check this out, here's some fun facts: ".format(number,decimal))
     print("\nDid you know that if you add {} and my favorite number, 17, you get {}?".format(number,(number+17)))
     number += 17
