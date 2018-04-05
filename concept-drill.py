@@ -15,7 +15,6 @@ def start(name="", number=0, decimal=0, array=[]):
     array = short_list(name, array)
     fun_facts(number,decimal)
     
-
 def get_name(name):
     #In this function we get the user's name, assign the string to a variable, and use .format to print it back.
     name = raw_input("Hello my dude! I want to play a game. The rules are simple. Just do everything I ask. First of all, what is your name? ").capitalize()
@@ -107,14 +106,5 @@ def fun_facts(number, decimal):
     exit()
         
     
-
-
-
-    
-    
-        
-
-
-
 if __name__ == "__main__":
     start()
